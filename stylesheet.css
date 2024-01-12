@@ -4,11 +4,12 @@
     box-sizing: border-box;
     font-size: 20px;
     font-family: Canva Sans,Noto Sans Variable,Noto Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+    background-color: #DE846D;
 }
 h1 {
     font-size: 45px;
-
 }
+
 
 
 .menu-container {
@@ -16,7 +17,6 @@ h1 {
     justify-content: center;
 }
 .menu-items {
-    border: 1px solid black;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,7 +36,6 @@ h1 {
     display: flex;
 }
 .main-items {
-    border: 1px solid black;
     display: flex;
     align-items: center;
 }
@@ -57,44 +56,43 @@ h1 {
     padding: 1em;
     padding-right: 5em;
 }
+#bio-background {
+    background-color: #6ddebc;
+}
 
 
 .button-container {
     display: flex;
-    justify-content: center;
-    flex-direction: column;/*
-    align-items: center;
-    width: 30%;*/
-   
+    justify-content: stretch;
+    flex-direction:column;
+    align-items: stretch;
+    width: 30%;
+    height: 100%;
 }
-.button-items{
+.button-items {
     display: flex; 
-    justify-content: center; 
+    justify-content: flex-start; 
     flex-direction: column;
-    gap: 3.3em;
-    padding: .25em;
+    align-items: stretch;
 }
-.contact-button {
+
+#contact-button {
     display: flex;
-    
-    align-items: center;
-    border: 4px solid black;
+    font-size:xx-large;
     background-color: #DE6D8F;
-    
+    padding: 1em;
 }
-.links-button {
+#links-button {
     display: flex;
-
-    align-items: center;
-    border: 4px solid black;
+    font-size:xx-large;
     background-color: #846DDE;
+    padding: 1em;
 }
-.third-one {
+#idk-button {
     display: flex;
-    
-
-    align-items: center;
-    border: 4px solid black;
+    font-size:xx-large;
     background-color: #6DDE84;
+    padding: 1em;
 }
+
 
