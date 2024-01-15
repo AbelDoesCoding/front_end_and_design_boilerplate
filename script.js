@@ -1,9 +1,4 @@
-/*var contactBUtton = document.getElementById("contact-button").value;
-function buttonHover() {
-    document.body.style.backgroundColor = "#AA0000";
-}; */
-
-function test(){
+/*function test(){
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
     const emailCheckChar = "@";
@@ -17,10 +12,34 @@ function test(){
         }
       }
     if (emailCheck==true) {
-        alert("account has been created!")
+        alert("form has been submitted!")
     } else {
         alert("please check email address for errors.")
     }
 }
+*/
 
+
+
+function fizzBuzz() {
+    var userInput = document.getElementById("userInput").value;
+    var numList = [];
+    var outputContainer = document.getElementById("fizzBuzzContainer"); /* figure out how to keep div container with answer after refresh" */
+    if (userInput % 3 == 0 & userInput % 5 == 0){
+        document.getElementById("fizzBuzzContainer").innerHTML = "fizz buzz !!";
+        alert("fizz buzz !");
+    } else if (userInput % 3 == 0) {
+        alert("fizzzzz");
+        document.getElementById("fizzBuzzContainer").innerHTML = "fizz !!";
+    } else if (userInput % 5 == 0) {
+        alert("buzzzzzzz");
+        document.getElementById("fizzBuzzContainer").innerHTML = "buzz !!";
+    } else {
+        for (i = 1; i <= userInput; i++) {
+            numList.push(i);
+        }
+        alert(numList);
+        document.getElementById(numList).innerHTML = "fizz buzz !!";
+    }
+}
 
