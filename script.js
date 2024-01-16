@@ -21,25 +21,57 @@
 
 
 
-function fizzBuzz() {
-    var userInput = document.getElementById("userInput").value;
-    var numList = [];
-    var outputContainer = document.getElementById("fizzBuzzContainer"); /* figure out how to keep div container with answer after refresh" */
-    if (userInput % 3 == 0 & userInput % 5 == 0){
-        document.getElementById("fizzBuzzContainer").innerHTML = "fizz buzz !!";
-        alert("fizz buzz !");
-    } else if (userInput % 3 == 0) {
-        alert("fizzzzz");
-        document.getElementById("fizzBuzzContainer").innerHTML = "fizz !!";
-    } else if (userInput % 5 == 0) {
-        alert("buzzzzzzz");
-        document.getElementById("fizzBuzzContainer").innerHTML = "buzz !!";
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+
+function determineWinner(x, y) {
+    if (x != 0 & x != 1 & x != 2) {
+      return 2;
+    }
+    if (x == 0 & y == 1 || x == 1 && y == 2 || x == 2 && y == 0) {
+      return 1;
     } else {
-        for (i = 1; i <= userInput; i++) {
-            numList.push(i);
-        }
-        alert(numList);
-        document.getElementById(numList).innerHTML = "fizz buzz !!";
+      return 0;
     }
 }
 
+function scoreUpdate(is, cs) {
+  return "Current score is User: " + is + " Computer score: " + cs;
+}
+
+function gameWinner(eis, ecs) {
+  if (eis <= ecs ) {
+    alert("Computer wins!");
+  } else {
+    alert("Hey! You win!!");
+  }
+}
+
+  function game() {
+    var computerScore = 0;
+    var inputScore = 0;
+    var gameLevel = 0;
+
+    while (gameLevel < 5) {
+      var userInput = prompt("Pick your move:")
+      var computerChoice = getRandomInt(3);
+      var determination = determineWinner(userInput, computerChoice);
+      if ( determination == 0) {
+        alert("you win");
+        inputScore += 1;
+        gameLevel += 1;
+        alert(scoreUpdate(inputScore, computerScore));
+      } else if (determination == 1) {
+        alert("hehe you lose!");
+        computerScore += 1;
+        gameLevel += 1;
+        alert(scoreUpdate(inputScore, computerScore));
+      } else if (determination == 2) {
+        alert("please select legit move");
+        gameLevel == gameLevel;
+    } 
+  }
+  gameWinner(inputScore, computerScore);
+  }
