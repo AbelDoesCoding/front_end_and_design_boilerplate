@@ -1,4 +1,4 @@
-// index buttons and their color changing on hover
+//Main Container: index buttons and their color changing on hover/ learn more button
 const contactBtn = document.querySelector('#contact-button');
 contactBtn.addEventListener('mouseover', () => {
   contactBtn.style.background = '#B02851';
@@ -22,4 +22,15 @@ idkBtn.addEventListener('mouseover', () => {
 idkBtn.addEventListener('mouseout', () => {
   idkBtn.style.background = '#6DDE84';
 });
+
+const learnMore = document.querySelector('#learn-more');
+const content = document.createElement('learn-more-box');
+content.classList.add('content');
+content.textContent = 'This is the glorious text-content!';
+learnMore.addEventListener('click', () => {
+  learnMore.appendChild(content);
+})
+
+
+
 
