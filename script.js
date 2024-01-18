@@ -24,11 +24,9 @@ idkBtn.addEventListener('mouseout', () => {
 });
 
 const learnMore = document.querySelector('#learn-more');
-const content = document.createElement('learn-more-box');
-content.classList.add('content');
-content.textContent = 'This is the glorious text-content!';
 learnMore.addEventListener('click', () => {
-  learnMore.appendChild(content);
+  learnMore.textContent = "Look !!! New words to learn!!";
+
 })
 
 
